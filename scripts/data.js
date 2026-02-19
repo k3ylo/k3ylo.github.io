@@ -2,7 +2,7 @@ const configsData = [
   {
     id: 1,
     name: "css x64",
-    fullName: "steam version latest",
+    fullName: "steam version (latest)",
     lastUpdated: "2024-02-15",
     file_path: "./assets/configs/cssx64.zip"
   },
@@ -51,4 +51,5 @@ const videosData = [
   }
 
 ];
+
 
