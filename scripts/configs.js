@@ -51,7 +51,7 @@ function createConfigCard(config) {
   
   const downloadBtn = document.createElement('button');
   downloadBtn.className = 'config-download-btn';
-  downloadBtn.textContent = 'Download ZIP';
+  downloadBtn.textContent = 'download';
   downloadBtn.onclick = function() {
     handleDownload(config);
   };
@@ -73,3 +73,4 @@ function handleDownload(config) {
   link.click();
   document.body.removeChild(link);
 }
+
