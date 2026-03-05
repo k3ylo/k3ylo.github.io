@@ -11,7 +11,7 @@
 }
 
 .social-card {
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   display: flex;
   flex-direction: column;
   background-color: #000;
@@ -22,8 +22,7 @@
 }
 
 .social-card:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #111;
 }
 
 .social-card-header {
@@ -31,7 +30,7 @@
   align-items: center;
   gap: 20px;
   padding: 30px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff3b;
 }
 
 .social-card-icon {
@@ -72,7 +71,7 @@
 
 .social-card-footer {
   padding: 20px 30px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #ffffff44;
   display: flex;
   justify-content: flex-end;
 }
