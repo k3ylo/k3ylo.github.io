@@ -39,7 +39,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 18px 30px;
   border-bottom: 1px solid #333;
 }
 
@@ -55,7 +55,7 @@ a {
 }
 
 .back-btn {
-  padding: 8px 20px;
+  padding: 4px 14px;
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
