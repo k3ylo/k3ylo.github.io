@@ -75,3 +75,108 @@ a {
   flex-direction: column;
   align-items: center;
 }
+/* ========== АДАПТИВНОСТЬ ДЛЯ ВСЕХ УСТРОЙСТВ ========== */
+
+/* 1. Базовые правила для всех элементов */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* 2. Исправление изображений и видео */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. Исправление контейнеров */
+body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* 4. Исправление всех блоков */
+div, section, article, header, footer, main {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* 5. Исправление таблиц */
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* 6. Исправление меню и флексбоксов */
+nav, .menu, .flex-container {
+    flex-wrap: wrap !important;
+}
+
+/* 7. Медиа-запросы для разных экранов */
+
+/* Для планшетов (до 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em !important;
+    }
+    
+    h2 {
+        font-size: 1.5em !important;
+    }
+    
+    /* Убираем горизонтальную прокрутку */
+    .container, .wrapper {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+/* Для телефонов (до 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.5em !important;
+    }
+    
+    /* Вертикальное меню для телефонов */
+    .menu, nav ul {
+        display: block !important;
+        text-align: center;
+    }
+    
+    .menu li, nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    /* Отключаем горизонтальный скролл */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+}
+
+/* Для очень маленьких телефонов (до 320px) */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 13px;
+    }
+    
+    /* Убираем лишние отступы */
+    * {
+        margin: 5px !important;
+        padding: 5px !important;
+    }
+}
