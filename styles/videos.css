@@ -174,7 +174,7 @@
     color: #000;
 }
 
-/* Адаптация для телефонов */
+/* Адаптация для телефоновв */
 @media (max-width: 768px) {
     .video-thumbnail {
         height: auto;
