@@ -8,34 +8,59 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    // Используем твою структуру с videos-grid
-    container.innerHTML = `
-        <div class="videos-grid">
-            ${videosData.map(video => `
-                <div class="video-card">
-                    <div class="video-thumbnail">
-                        <iframe 
-                            src="${video.youtubeUrl}?autoplay=0&modestbranding=1"
-                            title="${video.title}"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3 class="video-title">${video.title}</h3>
-                        ${video.date ? `<p class="video-time">📅 ${video.date}</p>` : ''}
-                        ${video.description ? `<p class="video-quality">${video.description}</p>` : ''}
-                    </div>
-                    ${video.downloadUrl ? `
-                        <div class="video-actions">
-                            <a href="${video.downloadUrl}" class="video-download-btn" download target="_blank">
-                                download
-                            </a>
-                        </div>
-                    ` : ''}
+    container.innerHTML = '';
+    
+    const grid = document.createElement('div');
+    grid.className = 'videos-grid';
+    
+    videosData.forEach(video => {
+        const card = document.createElement('div');
+        card.className = 'video-card';
+        
+        const hasDownload = video.downloadUrl && video.downloadUrl !== '';
+        
+        let actionsHtml = '';
+        if (hasDownload) {
+            actionsHtml = `
+                <div class="video-actions">
+                    <a href="${video.downloadUrl}" class="video-action-btn" download target="_blank">
+                        download
+                    </a>
                 </div>
-            `).join('')}
-        </div>
-    `;
+            `;
+        }
+        
+        card.innerHTML = `
+            <div class="video-thumbnail">
+                <iframe 
+                    src="${video.youtubeUrl}?autoplay=0&modestbranding=1"
+                    title="${video.title}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-name">
+                    <span class="info-label">name:</span>
+                    <span class="info-value">${video.title}</span>
+                </div>
+                <div class="video-date">
+                    <span class="info-label">date uploaded:</span>
+                    <span class="info-value">${video.date || 'unknown'}</span>
+                </div>
+                ${video.description ? `
+                <div class="video-desc">
+                    <span class="info-label">description:</span>
+                    <span class="info-value">${video.description}</span>
+                </div>
+                ` : ''}
+            </div>
+            ${actionsHtml}
+        `;
+        
+        grid.appendChild(card);
+    });
+    
+    container.appendChild(grid);
 });
