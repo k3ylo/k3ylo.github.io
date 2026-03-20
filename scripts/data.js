@@ -47,7 +47,7 @@ const videosData = [
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/gclXKMziQqk",
     date: "12.02.2026",
-    downloadUrl: "https://mega.nz/IZdnSbCZ#fKgxQW0rDU4ixtiVN_DChkpPf6lBgLrJy-pcfSmOm28"
+    downloadUrl: "https://mega.nz/file/IZdnSbCZ#fKgxQW0rDU4ixtiVN_DChkpPf6lBgLrJy-pcfSmOm28"
   },
   {
     id: 2,
