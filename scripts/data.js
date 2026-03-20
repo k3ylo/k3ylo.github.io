@@ -1,3 +1,4 @@
+// Данные для конфигов
 const configsData = [
   {
     id: 1,
@@ -34,4 +35,16 @@ const configsData = [
     lastUpdated: "19.02.2026",
     file_path: "./assets/configs/cm.zip"
   }
+];
+
+// Данные для видео - добавляй свои видео сюда
+const videosData = [
+  {
+    id: 1,
+    title: "Название твоего видео",
+    description: "Описание видео",
+    youtubeUrl: "https://youtu.be/gclXKMziQqk?si=VtxYE41u182K7OZJ",
+    date: "20.03.2026"
+  }
+  // Добавляй новые видео через запятую
 ];
