@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="video-info">
                 <div class="video-name">
-                    <span class="info-label">name:</span>
-                    <span class="info-value">${video.title}</span>
-                </div>
+    <span class="info-label">title:</span>
+    <span class="info-value">${video.title}</span>
+</div>
                 <div class="video-date">
                     <span class="info-label">date uploaded:</span>
                     <span class="info-value">${video.date || 'unknown'}</span>
