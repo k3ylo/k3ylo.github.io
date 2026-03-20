@@ -42,10 +42,9 @@ const videosData = [
   {
     id: 1,
     title: "chasm",
-    description: "твой трек", // будет отображаться как качество/описание
+    description: " ",
     youtubeUrl: "https://www.youtube.com/embed/gclXKMziQqk",
     date: "12.02.2026",
-    downloadUrl: "https://mega.nz/твоя_ссылка" // добавь сюда ссылку
+    downloadUrl: "https://mega.nz/твоя_ссылка"  // ДОБАВЬ ЭТУ СТРОКУ
   }
-  // Добавляй новые видео сюда
 ];
