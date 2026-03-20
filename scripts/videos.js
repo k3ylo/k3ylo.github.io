@@ -3,37 +3,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!container) return;
     
-    // Используем videosData из data.js
     if (typeof videosData === 'undefined' || !videosData.length) {
-        container.innerHTML = '<div class="no-videos">Видео не найдены</div>';
+        container.innerHTML = '<div class="no-data">Видео не найдены</div>';
         return;
     }
     
-    container.innerHTML = '';
-    
-    videosData.forEach(video => {
-        const videoCard = document.createElement('div');
-        videoCard.className = 'video-item';
-        
-        videoCard.innerHTML = `
-            <div class="video-wrapper">
-                <iframe 
-                    src="${video.youtubeUrl}"
-                    title="${video.title}"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="video-info">
-                <h3 class="video-title">${video.title}</h3>
-                <p class="video-description">${video.description}</p>
-                <div class="video-meta">
-                    <span class="video-date">${video.date}</span>
+    // Используем твою структуру с videos-grid
+    container.innerHTML = `
+        <div class="videos-grid">
+            ${videosData.map(video => `
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe 
+                            src="${video.youtubeUrl}?autoplay=0&modestbranding=1"
+                            title="${video.title}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">${video.title}</h3>
+                        ${video.date ? `<p class="video-time">📅 ${video.date}</p>` : ''}
+                        ${video.description ? `<p class="video-quality">${video.description}</p>` : ''}
+                    </div>
+                    ${video.downloadUrl ? `
+                        <div class="video-actions">
+                            <a href="${video.downloadUrl}" class="video-download-btn" download target="_blank">
+                                download
+                            </a>
+                        </div>
+                    ` : ''}
                 </div>
-            </div>
-        `;
-        
-        container.appendChild(videoCard);
-    });
+            `).join('')}
+        </div>
+    `;
 });
