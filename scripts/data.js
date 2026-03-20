@@ -37,7 +37,7 @@ const configsData = [
   }
 ];
 
-// Данные для видео
+// Данные для видео!
 const videosData = [
   {
     id: 1,
