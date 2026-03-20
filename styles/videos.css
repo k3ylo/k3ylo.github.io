@@ -77,16 +77,35 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
 
-.video-title,
-.video-time,
-.video-quality {
-  margin: 0;
+/* Новые стили для меток name, date uploaded, description */
+.video-name,
+.video-date,
+.video-desc {
   font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
+}
+
+.info-label {
+  color: #00ff00;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.info-value {
+  color: #fff;
+}
+
+/* Для описания с переносами строк */
+.video-desc .info-value {
+  white-space: pre-line;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .video-actions {
@@ -103,6 +122,10 @@
   font-size: 14px;
   transition: all 0.3s;
   font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: block;
 }
 
 .video-action-btn:hover:not(:disabled) {
@@ -115,7 +138,6 @@
   cursor: not-allowed;
 }
 
-
 @media (max-width: 1200px) {
   .videos-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -126,7 +148,17 @@
   .videos-grid {
     grid-template-columns: 1fr;
   }
+  
+  .video-thumbnail {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .videos-container {
+    padding: 0 10px;
+  }
 }
+
 /* ========== ДОБАВЛЕННЫЕ ФИКСЫ ========== */
 
 /* Убираем огромные полоски - центрируем видео */
@@ -136,14 +168,14 @@
 }
 
 .videos-grid {
-    max-width: 1200px; /* Ограничиваем максимальную ширину сетки */
-    margin: 0 auto; /* Центрируем */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Увеличиваем размер видео */
 .video-thumbnail {
-    height: auto; /* Убираем фиксированную высоту */
-    aspect-ratio: 16 / 9; /* Сохраняем пропорции 16:9 */
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 /* Делаем видео больше */
@@ -151,37 +183,4 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Кнопка скачивания в твоем стиле */
-.video-download-btn {
-    padding: 12px;
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    border-top: 1px solid #fff;
-    font-size: 14px;
-    transition: all 0.3s;
-    font-family: 'Courier New', Courier, monospace;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-.video-download-btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-/* Адаптация для телефоновв */
-@media (max-width: 768px) {
-    .video-thumbnail {
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
-    
-    .videos-container {
-        padding: 0 10px;
-    }
 }
