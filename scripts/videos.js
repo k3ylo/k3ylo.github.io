@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     videosData.forEach(video => {
         const card = document.createElement('div');
-        card.className = 'video-card';
+        // Добавляем класс collaboration, если это коллаборация
+        card.className = 'video-card' + (video.isCollaboration ? ' collaboration' : '');
         
         const hasDownload = video.downloadUrl && video.downloadUrl !== '';
         
@@ -30,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
         
+        // Добавляем бейдж для коллабораций
+        const titleHtml = video.isCollaboration 
+            ? `${video.title} <span class="collab-badge">collab</span>`
+            : video.title;
+        
         card.innerHTML = `
             <div class="video-thumbnail">
                 <iframe 
@@ -42,9 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="video-info">
                 <div class="video-name">
-    <span class="info-label">title:</span>
-    <span class="info-value">${video.title}</span>
-</div>
+                    <span class="info-label">title:</span>
+                    <span class="info-value">${titleHtml}</span>
+                </div>
                 <div class="video-date">
                     <span class="info-label">date uploaded:</span>
                     <span class="info-value">${video.date || 'unknown'}</span>
