@@ -41,10 +41,10 @@ const configsData = [
 const videosData = [
   {
     id: 1,
-    title: "Название твоего видео",
-    description: "Описание видео",
-    youtubeUrl: "https://youtu.be/gclXKMziQqk?si=VtxYE41u182K7OZJ",
-    date: "20.03.2026"
+    title: "chasm",
+    description: " ",
+    youtubeUrl: "https://www.youtube.com/embed/gclXKMziQqk",
+    date: "12.02.2026"
   }
   // Добавляй новые видео через запятую
 ];
