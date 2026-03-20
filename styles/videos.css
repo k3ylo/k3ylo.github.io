@@ -127,3 +127,61 @@
     grid-template-columns: 1fr;
   }
 }
+/* ========== ДОБАВЛЕННЫЕ ФИКСЫ ========== */
+
+/* Убираем огромные полоски - центрируем видео */
+.videos-container {
+    display: flex;
+    justify-content: center;
+}
+
+.videos-grid {
+    max-width: 1200px; /* Ограничиваем максимальную ширину сетки */
+    margin: 0 auto; /* Центрируем */
+}
+
+/* Увеличиваем размер видео */
+.video-thumbnail {
+    height: auto; /* Убираем фиксированную высоту */
+    aspect-ratio: 16 / 9; /* Сохраняем пропорции 16:9 */
+}
+
+/* Делаем видео больше */
+.video-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопка скачивания в твоем стиле */
+.video-download-btn {
+    padding: 12px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-top: 1px solid #fff;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.video-download-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 768px) {
+    .video-thumbnail {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .videos-container {
+        padding: 0 10px;
+    }
+}
