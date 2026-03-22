@@ -42,7 +42,7 @@ function createConfigCard(config) {
   footer.className = 'config-card-footer';
   const downloadBtn = document.createElement('button');
   downloadBtn.className = 'config-download-btn';
-  downloadBtn.textContent = 'Download ZIP';
+  downloadBtn.textContent = 'download';
   downloadBtn.onclick = function() {
     handleDownload(config);
   };
