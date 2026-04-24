@@ -155,7 +155,7 @@ const videosData = [
 
 // Данные для раздела SETUP (твой компьютер)
 const setupData = {
-  title: "my rig",
+  title: "setup",
   lastUpdated: "2026-04-24",
   sections: [
     {
