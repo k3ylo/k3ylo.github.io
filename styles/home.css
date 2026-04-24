@@ -204,3 +204,19 @@
   padding-top: 20px;
   border-top: 1px solid #333;
 }
+
+/* Стрелка для прокрутки вниз */
+.scroll-down {
+  text-align: center;
+  font-size: 36px;
+  color: #ccc;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.7;
+}
+.scroll-down:hover {
+  opacity: 1;
+  transform: translateY(5px);
+  color: #fff;
+}
