@@ -57,5 +57,10 @@
 
   <script src="./scripts/data.js"></script>
   <script src="./scripts/setup.js"></script>
+  <script>
+  document.getElementById('scrollDownBtn').addEventListener('click', function() {
+    document.getElementById('setup-container').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
