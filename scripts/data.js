@@ -37,7 +37,7 @@ const configsData = [
   }
 ];
 
-// Данные для видео!
+// Данные для видео
 const videosData = [
   {
     id: 1,
@@ -46,7 +46,7 @@ const videosData = [
 24fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/gclXKMziQqk",
-    date: "12.02.2026",
+    date: "2026-02-12",
     downloadUrl: "https://mega.nz/file/IZdnSbCZ#fKgxQW0rDU4ixtiVN_DChkpPf6lBgLrJy-pcfSmOm28"
   },
   {
@@ -56,7 +56,7 @@ const videosData = [
 24fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/Q1FT7iEmMVU",
-    date: "30.12.2025",
+    date: "2025-12-30",
     downloadUrl: "https://mega.nz/file/MV0xWLSJ#zTFbVN2GuAYI4Yxj704ypWOBwpsIUvLmVjWNKSo6hJk"
   },
   {
@@ -66,7 +66,7 @@ const videosData = [
 24fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/jJLCbiJGaTo",
-    date: "01.10.2025",
+    date: "2025-10-01",
     downloadUrl: "https://mega.nz/file/ZR0BkJbD#EC_v3_0GTjYsKaCE6_gEzmsZte-ELTWDN1bx70b7Lug"
   },
   {
@@ -76,7 +76,7 @@ const videosData = [
 60fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/aTf06Z_bTvY",
-    date: "04.06.2025",
+    date: "2025-06-04",
     downloadUrl: "https://mega.nz/file/McVXDbDA#-sjbczzMG2Z-80HL0uo8Q_2WX4ZK5q_QeGMAKQ5fpME"
   },
   {
@@ -86,7 +86,7 @@ const videosData = [
 24fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/FJQmJerA_ok",
-    date: "26.04.2025",
+    date: "2025-04-26",
     downloadUrl: "https://mega.nz/file/VAkxjZqY#Zn2Y_gqkOCVwQRZZKTJzoqo26Sqx0tQZimarbBarSPQ",
     isCollaboration: true
   },
@@ -97,7 +97,7 @@ const videosData = [
 24fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/jt02jQSQJjU",
-    date: "14.02.2025",
+    date: "2025-02-14",
     downloadUrl: "https://mega.nz/file/cQ82STCZ#Sg503wmMzNlX-pgn1tpq5PSDzPUCEVphkGID5kSnidg"
   },
   {
@@ -107,7 +107,7 @@ const videosData = [
 30fps
 35000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/pjOGWZY6w_E",
-    date: "03.02.2025",
+    date: "2025-02-03",
     downloadUrl: "https://mega.nz/file/5QcDXYzS#vQy50V1b8v7gtsIXOTqk3ZbQAdLZ1rkEv3uu14biiuk",
     isCollaboration: true
   },
@@ -118,7 +118,7 @@ const videosData = [
 60fps
 40000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/9vBKSil6MCc",
-    date: "27.11.2024",
+    date: "2024-11-27",
     downloadUrl: "https://mega.nz/file/5UcCTRAb#A-NJcdwSkN8pHTGm9ugpplqWj5fbfCG6xfhKFqV9e-M"
   },
   {
@@ -128,7 +128,7 @@ const videosData = [
 60fps
 10000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/wJLN4QOHA8U",
-    date: "13.12.2024",
+    date: "2024-12-13",
     downloadUrl: "https://mega.nz/file/gd9XHDpK#ORd67NRASecTUD9P59cLYuDoXuzc5u0sUDqHg8RPkoM"
   },
   {
@@ -138,7 +138,7 @@ const videosData = [
 60fps
 50000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/DQAZIAnVaTs",
-    date: "03.12.2024",
+    date: "2024-12-03",
     downloadUrl: "https://mega.nz/file/9EUQDSpD#cZXLwV_1Hu8ujAJRLSCiwtko9J-w6ZXSUSyZvvtO6Go"
   },
   {
@@ -148,7 +148,53 @@ const videosData = [
 60fps
 70000 bitrate`,
     youtubeUrl: "https://www.youtube.com/embed/dhX0-WvYkk0",
-    date: "09.07.2024",
+    date: "2024-07-09",
     downloadUrl: "https://mega.nz/file/QE8j0a6S#zpFpt32U2yCFo_6UAbfMoA5XeM5LWxj8hDjtZPAfL5A"
   }
 ];
+
+// Данные для раздела SETUP (твой компьютер)
+const setupData = {
+  title: "my rig",
+  lastUpdated: "2026-04-24",
+  sections: [
+    {
+      name: "core system",
+      items: [
+        "motherboard: gigabyte b550m aorus elite",
+        "cpu: amd ryzen 5 5600",
+        "cpu cooler: cooler master hyper 212 evo v2",
+        "ram: 32gb (2x16) hyperx fury white",
+        "gpu: gigabyte geforce rtx 3060 ti 8gb",
+        "psu: deepcool pl800d (800w)"
+      ]
+    },
+    {
+      name: "storage",
+      items: [
+        "ssd: 512gb adata xpg gammix s11 pro",
+        "ssd2: m.2 nvme kingston nv3 1000gb"
+      ]
+    },
+    {
+      name: "peripherals",
+      items: [
+        "keyboard: royal kludge r104 (black)",
+        "mouse: lamzu atlantis mini (white)",
+        "mousepad: prosleeves 100x50 (black)",
+        "main monitor: samsung odyssey g4, 240hz, 1920x1080",
+        "secondary monitor: acer nitro qg240ys3bipx, 180hz, 1920x1080",
+        "headphones: fiio jd10 (black)",
+        "microphone: fifine a8 (white) + custom pantograph arm"
+      ]
+    },
+    {
+      name: "other",
+      items: [
+        "case: ardor gaming rare minicase ms4 bg (black)",
+        "chair: gamelab tetra (black)",
+        "os: microsoft windows 11 pro (x64)"
+      ]
+    }
+  ]
+};
