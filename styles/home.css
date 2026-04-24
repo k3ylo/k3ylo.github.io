@@ -129,7 +129,7 @@
 
 /* ===== БЛОК С ХАРАКТЕРИСТИКАМИ (SETUP) ===== */
 .site-setup {
-  margin-top: 30px;   /* подняли выше, чтобы сразу было видно */
+  margin-top: 30px;
   padding: 20px 20px 40px;
   border-top: 1px solid #333;
   max-width: 1200px;
@@ -143,11 +143,10 @@
   font-weight: normal;
   letter-spacing: 2px;
   margin-bottom: 30px;
-  color: #e0e0e0;
+  color: #fff; /* теперь белый */
   font-family: 'Courier New', monospace;
 }
 
-/* Сетка: на телефоне 1 колонка, на широком экране 4 колонки */
 .setup-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -161,7 +160,6 @@
   }
 }
 
-/* Для средних экранов — 2 колонки */
 @media (min-width: 768px) and (max-width: 1024px) {
   .setup-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -172,14 +170,14 @@
   background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
   padding: 15px 20px;
-  border-left: 2px solid #00ff00;
+  border-left: 2px solid #fff; /* белая рамка */
 }
 
 .setup-section-title {
   font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 15px;
-  color: #00ff00;
+  color: #fff; /* белый текст */
   font-family: 'Courier New', monospace;
   text-transform: uppercase;
 }
