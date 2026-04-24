@@ -129,7 +129,8 @@
 
 /* ===== БЛОК С ХАРАКТЕРИСТИКАМИ (SETUP) ===== */
 .site-setup {
-  margin-top: 30px;
+  margin-top: 0;   /* совсем убрали отступ сверху */
+  /* остальное без изменений */
   padding: 20px 20px 40px;
   border-top: 1px solid #333;
   max-width: 1200px;
