@@ -1,4 +1,3 @@
-// Данные для конфигов
 const configsData = [
   {
     id: 1,
@@ -34,8 +33,8 @@ const configsData = [
     fullName: "css v34, cm v3.0",
     lastUpdated: "2026-03-22",
     file_path: "./assets/configs/cm.zip"
-  }
-    {
+  }, // ← ВОТ ЭТА ЗАПЯТАЯ
+  {
     id: 6,
     name: "hl2",
     fullName: "ghostingmod",
