@@ -40,7 +40,7 @@ const configsData = [
     name: "hl2",
     fullName: "ghostingmod",
     lastUpdated: "2026-06-18",
-    file_path: "./assets/configs/hl2.zip"
+    file_path: "./assets/configs/ghostingmod.zip"
   }
 ];
 
