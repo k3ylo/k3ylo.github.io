@@ -12,9 +12,7 @@
     <header class="header">
       <div class="header-left">
         <span class="page-title">saykiry/configs</span>
-        <button class="back-btn" onclick="window.history.back()">
-          back
-        </button>
+        <button class="back-btn" id="backBtn">back</button>
       </div>
     </header>
     <main class="main-content">
@@ -25,5 +23,16 @@
   </div>
   <script src="./scripts/data.js"></script>
   <script src="./scripts/configs.js"></script>
+  <script>
+    document.getElementById('backBtn').addEventListener('click', function() {
+      // Если есть предыдущая страница и она с этого же сайта — идём назад
+      if (document.referrer && document.referrer.includes(window.location.host)) {
+        window.history.back();
+      } else {
+        // Иначе — на главную
+        window.location.href = '/';
+      }
+    });
+  </script>
 </body>
 </html>
