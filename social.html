@@ -12,9 +12,7 @@
     <header class="header">
       <div class="header-left">
         <span class="page-title">saykiry/social</span>
-        <button class="back-btn" onclick="window.history.back()">
-          back
-        </button>
+        <button class="back-btn" id="backBtn">back</button>
       </div>
     </header>
     <main class="main-content">
@@ -73,5 +71,15 @@
       </div>
     </main>
   </div>
+
+  <script>
+    document.getElementById('backBtn').addEventListener('click', function() {
+      if (document.referrer && document.referrer.includes(window.location.host)) {
+        window.history.back();
+      } else {
+        window.location.href = '/';
+      }
+    });
+  </script>
 </body>
 </html>
