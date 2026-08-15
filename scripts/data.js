@@ -38,7 +38,7 @@ const configsData = [
     id: 6,
     name: "hl2",
     fullName: "ghostingmod",
-    lastUpdated: "2026-06-18",
+    lastUpdated: "2026-08-14",
     file_path: "./assets/configs/ghostingmod.zip"
   }
 ];
